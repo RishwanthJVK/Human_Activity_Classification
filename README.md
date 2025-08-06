@@ -1,26 +1,26 @@
 # Human Activity Classification Using Sensor Data
 
-This project focuses on building and evaluating machine learning models to classify human activities (like walking, sitting, standing, etc.) based on sensor data. The goal is to identify the best-performing classification model using systematic evaluation and hyperparameter tuning.
+This project focuses on building and evaluating machine learning models to classify human activities (like walking, sitting, standing, etc.) based on sensor data. The goal is to tune the hyperparameters of several classification models using GridSearchCV and identify the best-performing classification model using classification report.
 
 ---
 
-## 📂 Dataset
+## Dataset
 
-- **Source**: [Mention source – e.g., UCI HAR, Kaggle, etc.]
-- **Size**: [Number of samples], [Number of features]
-- **Classes**: 6 (e.g., Sitting, Standing, Walking, Lying Down, Upstairs, Downstairs)
+- **Source**: Kaggle
+- **Size**: 10299 rows x 562 columns
+- **Classes**: 6 (Sitting, Standing, Walking, Laying, walking upstairs, walking downstairs)
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
 To accurately classify a person's activity using sensor measurements like accelerometer and gyroscope data.
 
 ---
 
-## 🧠 Models Used
+## Models Used
 
-All models were evaluated using pipelines, scaling, and `GridSearchCV` for hyperparameter tuning:
+All models were evaluated using pipelines, and `GridSearchCV` for hyperparameter tuning:
 
 1. **Logistic Regression**
 2. **K-Nearest Neighbors**
@@ -35,16 +35,18 @@ All models were evaluated using pipelines, scaling, and `GridSearchCV` for hyper
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 - **Preprocessing**:
-  - Handled large data by stratified sampling (20%)
+  - Handled large data by stratified sampling 
   - Encoded target labels
-  - Feature scaling using `StandardScaler`
 
 - **Model Evaluation**:
   - Cross-validation (cv=5)
-  - Metrics: Accuracy, F1-Score, Confusion Matrix, ROC-AUC (if binary), Precision, Recall
+  - Metrics: Accuracy, F1-Score, Precision, Recall
+ 
+
+STarts here
 
 - **Visualization**:
   - Correlation plot of features vs. target
@@ -69,38 +71,26 @@ All models were evaluated using pipelines, scaling, and `GridSearchCV` for hyper
 | Stacking            |  |  |  |
 | Voting              |  |  |  |
 
-*Fill in actual values after running.*
+Ends here
 
 ---
 
-## ✅ Conclusion
-
-- **Best Model**: [e.g., Random Forest or Stacking Classifier]
-- **Key Takeaways**:
-  - Tree-based models handled feature interactions better.
-  - Distance-based models like KNN were sensitive to scaling and dimensionality.
-  - Ensemble methods (Stacking/Voting) improved accuracy marginally.
+## Conclusion
+The multiclass classification model effectively predicted six human activities based on sensor data using machine learning techniques.<br>
+Among various models tested, logistic regression achieved high classification accuracy.<br>
+The inclusion of GridSearchCV helped in fine-tuning hyperparameters to optimize performance.
 
 ---
 
-## ⚠️ Flaws & Limitations
+## Limitations & Next Steps
 
-- Some models were computationally heavy on large datasets.
-- Feature engineering was minimal — model relies heavily on raw data.
-- No real-time validation on unseen sensor streams.
-
----
-
-## 🔜 Next Steps
-
-- Incorporate time-series models (e.g., LSTM, HMM)
-- Add more features like mean, std, FFT components over sliding windows
-- Deploy as a lightweight mobile model for activity detection
-- Try auto-feature selection or dimensionality reduction (PCA)
+1. The dataset was sampled to only 100 due to memory or compute constraints, which may limit generalization.
+2. Sensor data preprocessing (e.g., noise reduction, signal segmentation, feature extraction) was not deeply explored.
 
 ---
 
-## 🛠️ Libraries Used
+
+## Libraries Used
 
 ```bash
 scikit-learn
