@@ -1,6 +1,6 @@
 # Human Activity Classification Using Sensor Data
 
-This project focuses on building and evaluating machine learning models to classify human activities (like walking, sitting, standing, etc.) based on time-series sensor data. The goal is to identify the best-performing classification model using systematic evaluation and hyperparameter tuning.
+This project focuses on building and evaluating machine learning models to classify human activities (like walking, sitting, standing, etc.) based on sensor data. The goal is to identify the best-performing classification model using systematic evaluation and hyperparameter tuning.
 
 ---
 
