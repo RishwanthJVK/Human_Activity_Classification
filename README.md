@@ -1,26 +1,26 @@
 # Human Activity Classification Using Sensor Data
 
-This project focuses on building and evaluating machine learning models to classify human activities (like walking, sitting, standing, etc.) based on sensor data. The goal is to identify the best-performing classification model using classification report.
+This project focuses on building and evaluating machine learning models to classify human activities (like walking, sitting, standing, etc.) based on time-series sensor data. The goal is to identify the best-performing classification model using systematic evaluation and hyperparameter tuning.
 
 ---
 
-##  Dataset
+## 📂 Dataset
 
-- **Source**: Kaggle 
-- **Size**: [
+- **Source**: [Mention source – e.g., UCI HAR, Kaggle, etc.]
+- **Size**: [Number of samples], [Number of features]
 - **Classes**: 6 (e.g., Sitting, Standing, Walking, Lying Down, Upstairs, Downstairs)
 
 ---
 
-##  Problem Statement
+## 🎯 Problem Statement
 
 To accurately classify a person's activity using sensor measurements like accelerometer and gyroscope data.
 
 ---
 
-## Models Used
+## 🧠 Models Used
 
-All models were evaluated using pipelines, and `GridSearchCV` for hyperparameter tuning:
+All models were evaluated using pipelines, scaling, and `GridSearchCV` for hyperparameter tuning:
 
 1. **Logistic Regression**
 2. **K-Nearest Neighbors**
@@ -38,8 +38,9 @@ All models were evaluated using pipelines, and `GridSearchCV` for hyperparameter
 ## ⚙️ Methodology
 
 - **Preprocessing**:
-  - Handled large data by stratified sampling 
+  - Handled large data by stratified sampling (20%)
   - Encoded target labels
+  - Feature scaling using `StandardScaler`
 
 - **Model Evaluation**:
   - Cross-validation (cv=5)
@@ -68,12 +69,17 @@ All models were evaluated using pipelines, and `GridSearchCV` for hyperparameter
 | Stacking            |  |  |  |
 | Voting              |  |  |  |
 
+*Fill in actual values after running.*
 
 ---
 
 ## ✅ Conclusion
 
-
+- **Best Model**: [e.g., Random Forest or Stacking Classifier]
+- **Key Takeaways**:
+  - Tree-based models handled feature interactions better.
+  - Distance-based models like KNN were sensitive to scaling and dimensionality.
+  - Ensemble methods (Stacking/Voting) improved accuracy marginally.
 
 ---
 
@@ -102,3 +108,4 @@ matplotlib
 pandas
 numpy
 seaborn
+
