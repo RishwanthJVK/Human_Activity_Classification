@@ -56,20 +56,21 @@ STarts here
 
 ---
 
-## 🧪 Results
+## Results
 
-| Model               | Accuracy | F1 Score | Time Taken |
-|---------------------|----------|----------|-------------|
-| Logistic Regression |  |  |  |
-| KNN                 |  |  |  |
-| SVM                 |  |  |  |
-| Decision Tree       |  |  |  |
-| Bagging             |  |  |  |
-| Random Forest       |  |  |  |
-| AdaBoost            |  |  |  |
-| Gradient Boost      |  |  |  |
-| Stacking            |  |  |  |
-| Voting              |  |  |  |
+| Model                        | Precision | Recall | F1-Score | Accuracy |
+| ---------------------------- | --------- | ------ | -------- | -------- |
+| Logistic Regression          | 0.881     | 0.867  | 0.865    | 0.867    |
+| K-Nearest Neighbors          | 0.715     | 0.733  | 0.706    | 0.733    |
+| Support Vector Machine (SVM) | 0.872     | 0.833  | 0.821    | 0.833    |
+| Decision Tree                | 0.817     | 0.767  | 0.765    | 0.767    |
+| Bagging Classifier           | 0.863     | 0.833  | 0.832    | 0.833    |
+| Random Forest                | 0.869     | 0.833  | 0.824    | 0.833    |
+| AdaBoost                     | 0.841     | 0.800  | 0.795    | 0.800    |
+| Gradient Boosting            | 0.767     | 0.733  | 0.713    | 0.733    |
+| Stacking Classifier          | 0.841     | 0.800  | 0.795    | 0.800    |
+| Voting Classifier            | 0.869     | 0.833  | 0.820    | 0.833    |
+
 
 Ends here
 
