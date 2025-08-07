@@ -46,12 +46,9 @@ All models were evaluated using pipelines, and `GridSearchCV` for hyperparameter
   - Metrics: Accuracy, F1-Score, Precision, Recall
  
 
-STarts here
-
 - **Visualization**:
-  - Correlation plot of features vs. target
+  - Classification Report
   - Confusion matrices
-  - Feature importance (tree-based models)
   - Model comparison bar chart
 
 ---
@@ -71,8 +68,6 @@ STarts here
 | Stacking Classifier          | 0.841     | 0.800  | 0.795    | 0.800    |
 | Voting Classifier            | 0.869     | 0.833  | 0.820    | 0.833    |
 
-
-Ends here
 
 ---
 
