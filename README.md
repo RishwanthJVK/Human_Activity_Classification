@@ -53,27 +53,31 @@ All models were evaluated using pipelines, and `GridSearchCV` for hyperparameter
 
 ---
 
-## Results
 
-| Model                        | Precision | Recall | F1-Score | Accuracy |
-| ---------------------------- | --------- | ------ | -------- | -------- |
-| Logistic Regression          | 0.881     | 0.867  | 0.865    | 0.867    |
-| K-Nearest Neighbors          | 0.715     | 0.733  | 0.706    | 0.733    |
-| Support Vector Machine (SVM) | 0.872     | 0.833  | 0.821    | 0.833    |
-| Decision Tree                | 0.817     | 0.767  | 0.765    | 0.767    |
-| Bagging Classifier           | 0.863     | 0.833  | 0.832    | 0.833    |
-| Random Forest                | 0.869     | 0.833  | 0.824    | 0.833    |
-| AdaBoost                     | 0.841     | 0.800  | 0.795    | 0.800    |
-| Gradient Boosting            | 0.767     | 0.733  | 0.713    | 0.733    |
-| Stacking Classifier          | 0.841     | 0.800  | 0.795    | 0.800    |
-| Voting Classifier            | 0.869     | 0.833  | 0.820    | 0.833    |
+## Model Performance Comparison
+
+| Model               | Precision | Recall | F1-Score | Accuracy |
+|----------------------|-----------|--------|----------|----------|
+| Logistic Regression  | 0.88      | 0.87   | 0.87     | 0.87     |
+| K-Nearest Neighbors  | 0.71      | 0.73   | 0.71     | 0.73     |
+| Support Vector Machine | 0.87    | 0.83   | 0.82     | 0.83     |
+| Decision Tree        | 0.84      | 0.77   | 0.76     | 0.77     |
+| Bagging Classifier   | 0.84      | 0.80   | 0.80     | 0.80     |
+| Random Forest        | 0.92      | 0.90   | 0.89     | **0.90** |
+| AdaBoost             | 0.84      | 0.80   | 0.80     | 0.80     |
+| Gradient Boosting    | 0.72      | 0.70   | 0.69     | 0.70     |
+| Stacking Classifier  | 0.87      | 0.83   | 0.83     | 0.83     |
+| Voting Classifier    | 0.87      | 0.83   | 0.82     | 0.83     |
+
+**Key Insight:** Random Forest outperformed other models, achieving the highest accuracy (~90%) and best overall balance across metrics.
+
 
 
 ---
 
 ## Conclusion
 The multiclass classification model effectively predicted six human activities based on sensor data using machine learning techniques.<br>
-Among various models tested, logistic regression achieved high classification accuracy.<br>
+Among various models tested, Random Forest achieved high classification accuracy.<br>
 The inclusion of GridSearchCV helped in fine-tuning hyperparameters to optimize performance.
 
 ---
